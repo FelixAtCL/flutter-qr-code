@@ -7,7 +7,6 @@
 import 'package:flutter/widgets.dart';
 import 'dart:ui';
 
-
 /// Represents a specific element / part of a QR code. This is used to isolate
 /// the different parts so that we can style and modify specific parts
 /// independently.
@@ -56,6 +55,9 @@ enum QrDataModuleShape {
 
   /// Use circular dots.
   circle,
+
+  /// Use heart dots.
+  heart,
 }
 
 /// Enumeration representing the shape behind embedded picture
@@ -134,10 +136,11 @@ class QrDataModuleStyle {
   /// [_outsideBorderRadius] <= [borderRadius]
   /// Get border radius for outside corners
   double get outsideBorderRadius {
-    if(roundedOutsideCorners) {
-      return _outsideBorderRadius != null
-          && _outsideBorderRadius! < borderRadius
-          ? _outsideBorderRadius! : borderRadius;
+    if (roundedOutsideCorners) {
+      return _outsideBorderRadius != null &&
+              _outsideBorderRadius! < borderRadius
+          ? _outsideBorderRadius!
+          : borderRadius;
     }
     return 0;
   }
