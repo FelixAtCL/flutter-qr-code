@@ -20,42 +20,42 @@ class _MainScreenState extends State<MainScreen> {
         // ignore: lines_longer_than_80_chars
         'Hey this is a QR code. Change this value in the main_screen.dart file.';
 
-    /*final qrFutureBuilder = FutureBuilder<ui.Image>(
-      future: _loadOverlayImage(),
-      builder: (ctx, snapshot) {
-        final size = 280.0;
-        if (!snapshot.hasData) {
-          return Container(width: size, height: size);
-        }
-        return CustomPaint(
-          size: Size.square(size),
-          painter: QrPainter(
-            data: message,
-            version: QrVersions.auto,
-            gapless: true,
-            eyeStyle: const QrEyeStyle(
-              eyeShape: QrEyeShape.square,
-              //color: Color(0xff128760),
-              borderRadius: 10,
-            ),
-            dataModuleStyle: const QrDataModuleStyle(
-              dataModuleShape: QrDataModuleShape.square,
-              //color: Color(0xff1a5441),
-              borderRadius: 5,
-            ),
-            // size: 320.0,
-            embeddedImage: snapshot.data,
-            embeddedImageStyle: QrEmbeddedImageStyle(
-              size: Size.square(50),
-              safeArea: true,
-              safeAreaMultiplier: 1.1,
-            ),
-          ),
-        );
-      },
-    );
+    // final qrFutureBuilder = FutureBuilder<ui.Image>(
+    //   future: _loadOverlayImage(),
+    //   builder: (ctx, snapshot) {
+    //     final size = 280.0;
+    //     if (!snapshot.hasData) {
+    //       return Container(width: size, height: size);
+    //     }
+    //     return CustomPaint(
+    //       size: Size.square(size),
+    //       painter: QrPainter(
+    //         data: message,
+    //         version: QrVersions.auto,
+    //         gapless: true,
+    //         eyeStyle: const QrEyeStyle(
+    //           eyeShape: QrEyeShape.square,
+    //           color: Color(0xff128760),
+    //           borderRadius: 10,
+    //         ),
+    //         dataModuleStyle: const QrDataModuleStyle(
+    //           dataModuleShape: QrDataModuleShape.square,
+    //           color: Color(0xff1a5441),
+    //           borderRadius: 5,
+    //         ),
+    //         size: 320.0,
+    //         embeddedImage: snapshot.data,
+    //         embeddedImageStyle: QrEmbeddedImageStyle(
+    //           size: Size.square(50),
+    //           safeArea: true,
+    //           safeAreaMultiplier: 1.1,
+    //         ),
+    //       ),
+    //     );
+    //   },
+    // );
 
-    return qrFutureBuilder;*/
+    // return qrFutureBuilder;
 
     return Material(
       color: Colors.white,
@@ -93,24 +93,23 @@ class _MainScreenState extends State<MainScreen> {
                       eyeStyle: const QrEyeStyle(
                         eyeShape: QrEyeShape.square,
                         color: Color(0xff128760),
-                        borderRadius: 10,
+                        borderRadius: 8,
                       ),
                       dataModuleStyle: const QrDataModuleStyle(
-                        dataModuleShape: QrDataModuleShape.square,
+                        dataModuleShape: QrDataModuleShape.heart,
                         color: Color(0xff1a5441),
-                        borderRadius: 5,
-                        roundedOutsideCorners: true,
                       ),
-                      embeddedImage: AssetImage('assets/images/4.0x/logo_yakka_transparent.png'),
-                      embeddedImageStyle: QrEmbeddedImageStyle(
-                        size: Size.square(40),
-                        color: Colors.white,
-                        safeArea: true,
-                        safeAreaMultiplier: 1.1,
-                        embeddedImageShape: EmbeddedImageShape.square,
-                        shapeColor: Color(0xff128760),
-                        borderRadius: 10,
-                      ),
+                      // embeddedImage: AssetImage(
+                      //     'assets/images/4.0x/logo_yakka_transparent.png'),
+                      // embeddedImageStyle: QrEmbeddedImageStyle(
+                      //   size: Size.square(40),
+                      //   color: Colors.white,
+                      //   safeArea: true,
+                      //   safeAreaMultiplier: 1.1,
+                      //   embeddedImageShape: EmbeddedImageShape.square,
+                      //   shapeColor: Color(0xff128760),
+                      //   borderRadius: 10,
+                      // ),
                     ),
                   ),
                 ),
